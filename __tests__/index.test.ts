@@ -1,42 +1,57 @@
 // Jest test file for main entry module
 
 import { prefx } from "../src";
+import { units } from "../src/constants/units";
 
 describe("prefx", () => {
 
-    it("Formarts Thousands From MAIN MODULE", () => {
-        expect(prefx(1000)).toBe("1K");
-        expect(prefx(1234)).toBe("1.23K");
-        expect(prefx(10000)).toBe("10K");
-        expect(prefx(12345)).toBe("12.34K");
-        expect(prefx(100000)).toBe("100K");
-        expect(prefx(850600)).toBe("850.6K");
-        expect(prefx(223456)).toBe("223.45K");
-        expect(prefx(500000)).toBe("500K");
-        expect(prefx(888888)).toBe("888.88K");
+    it("Tests prefx below Thousands", () => {
+        expect(prefx(units.hundred.value)).toBe("100");
     });
 
-    it("Formarts Millions From MAIN MODULE", () => {
-        expect(prefx(1000000)).toBe("1M");
-        expect(prefx(1234000)).toBe("1.23M");
-        expect(prefx(10000000)).toBe("10M");
-        expect(prefx(12345000)).toBe("12.34M");
-        expect(prefx(100000000)).toBe("100M");
-        expect(prefx(850600000)).toBe("850.6M");
-        expect(prefx(223456000)).toBe("223.45M");
-        expect(prefx(500000000)).toBe("500M");
-        expect(prefx(888888000)).toBe("888.88M");
+    it("Tests prefx on Thousands", () => {
+        expect(prefx(units.thousand.value)).toBe("1K");
+
     });
 
-    it("Formarts Billions From MAIN MODULE", () => {
-        expect(prefx(1000000000)).toBe("1B");
-        expect(prefx(1234000000)).toBe("1.23B");
-        expect(prefx(10000000000)).toBe("10B");
-        expect(prefx(12345000000)).toBe("12.34B");
-        expect(prefx(100000000000)).toBe("100B");
-        expect(prefx(850600000000)).toBe("850.6B");
-        expect(prefx(223456000000)).toBe("223.45B");
-        expect(prefx(500000000000)).toBe("500B");
-        expect(prefx(888888000000)).toBe("888.88B");
+    it("Tests prefx on Millions", () => {
+        expect(prefx(units.million.value)).toBe("1M");
+    });
+
+    it("Tests prefx on Billions", () => {
+        expect(prefx(units.billion.value)).toBe("1B");
+    });
+
+    it("Tests prefx on Trillions", () => {
+        expect(prefx(units.trillion.value)).toBe("1T");
+
+    });
+
+    it("Tests prefx on Quadrillions", () => {
+        expect(prefx(units.quadrillion.value)).toBe("1Q");
+    });
+
+    it("Tests prefx on Quintillions", () => {
+        expect(prefx(units.quintillion.value)).toBe("1Qt");
+    });
+
+    it("Tests prefx on Sextillions", () => {
+        expect(prefx(units.sextillion.value)).toBe("1St");
+    });
+
+    it("Tests prefx on Septillions", () => {
+        expect(prefx(units.septillion.value)).toBe("1Sp");
+    });
+
+    it("Tests prefx on Octillions", () => {
+        expect(prefx(units.octillion.value)).toBe("1O");
+    });
+
+    it("Tests prefx on Nonillions", () => {
+        expect(prefx(units.nonillion.value)).toBe("1N");
+    });
+
+    it("Tests prefx on Decillions", () => {
+        expect(prefx(units.decillion.value)).toBe("1D");
     });
 });

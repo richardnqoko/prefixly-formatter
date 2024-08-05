@@ -1,18 +1,16 @@
 
 # Changelog
 
-## [Unreleased]
+## [Coming-Soon]
 
 ### Added
-- Be able to format any number up to trillions.
-- Optimized formatting algorithm to handle any use cases.
 - Format data sizes like bytes, gigabytes etc.
 - Optional feature to specify expected output type.
 
-## [2.2.0] - 2024-08-05
+## [2.15.8] - 2024-08-06
 
 ### Features
-- **`prefx` Function**: Added a function to format numbers with units like thousands (`K`), millions (`M`) and billions (`M`).
+- **`prefx` Function**: Added a function to format numbers with units like thousands (`K`), millions (`M`), billions (`B`) etc.
 - **Utility Functions**:
   - **`convertNumber(num: number, unit: number, point?: number): number`**: Converts numbers by dividing them with a specified unit and rounding to a defined number of decimal points.
   - **`deciPoint(num: number, decimalPoint: number): number`**: Cuts numbers to the specified number of decimal places.
@@ -41,5 +39,4 @@
 - **Precision Handling**: Improved precision handling in `convertNumber` and `deciPoint` functions.
 
 ### Changed
-- **Formatting Logic**: Adjusted formatting logic to handle thousands (`K`), millions (`M`) and billions (`M`) with optional decimal precision.
-- **Usage Function**: Changed main function from prefX to prefx.
+- **Formatting Logic**: Adjusted formatting logic to handle large integers up to Decillion with optional decimal precision.

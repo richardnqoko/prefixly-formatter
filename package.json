@@ -1,10 +1,10 @@
 {
   "name": "prefixly-formatter",
-  "version": "2.2.0",
+  "version": "2.15.8",
   "main": "dist/src/index.js",
   "scripts": {
     "test": "jest",
-    "dev": "ts-node ./src/index",
+    "dev": "ts-node ./src/utils",
     "build": "tsc"
   },
   "keywords": ["typescript", "package", "formatting", "number", "prefix"],

@@ -41,7 +41,7 @@ Returns a string representing the number with the appropriate unit prefix.
 
 ## Formatting Logic
 
-The module includes built-in logic for formatting numbers in thousands (`K`), millions (`M`) and billions (`M`). More units can be added as needed.
+The module includes built-in logic for formatting numbers in thousands (`K`), millions (`M`), billions (`M`) and many more. More units can be added as needed.
 
 ## Contributing
 
