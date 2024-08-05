@@ -1,3 +1,5 @@
+# prefixly-formatter
+
 `prefixly-formatter` is a utility module for formatting numbers with unit prefixes. It simplifies the representation of large numbers by converting them into a more readable format with optional decimal precision.
 
 ## Installation
