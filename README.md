@@ -13,18 +13,18 @@ npm install prefixly-formatter
 
 ## Usage
 
-You can use `prefX` to format numbers with units like thousands. Here’s a quick example:
+You can use `prefx` to format numbers with units like thousands. Here’s a quick example:
 
 ```typescript
-import { prefX } from 'prefX';
+import { prefx } from 'prefixly-formatter';
 
-const formattedNumber = prefX(12345.6789, 2);
-console.log(formattedNumber); // Outputs: "12.35K"
+const formattedNumber = prefx(12345.6789, 2);
+console.log(formattedNumber); // Outputs: "12.34K"
 ```
 
 ## API
 
-### `prefX(num: number, point?: number): string`
+### `prefx(num: number, point?: number): string`
 
 - **num**: The number to format.
 - **point** (optional): The number of decimal places to include in the formatted output.
@@ -41,7 +41,7 @@ Returns a string representing the number with the appropriate unit prefix.
 
 ## Formatting Logic
 
-The module includes built-in logic for formatting numbers in thousands (`K`). More units can be added as needed.
+The module includes built-in logic for formatting numbers in thousands (`K`), millions (`M`) and billions (`M`). More units can be added as needed.
 
 ## Contributing
 

@@ -4,30 +4,31 @@
 ## [Unreleased]
 
 ### Added
-- Be able to format millions and billions.
+- Be able to format any number up to trillions.
 - Optimized formatting algorithm to handle any use cases.
+- Format data sizes like bytes, gigabytes etc.
+- Optional feature to specify expected output type.
 
-## [1.0.0] - 2024-08-04
+## [2.2.0] - 2024-08-05
 
 ### Features
-- **Initial Release**: Introduced the `prefixly-formatter` module for formatting numbers with unit prefixes.
-- **`prefX` Function**: Added a function to format numbers with units like thousands (`K`) and optional decimal precision.
+- **`prefx` Function**: Added a function to format numbers with units like thousands (`K`), millions (`M`) and billions (`M`).
 - **Utility Functions**:
   - **`convertNumber(num: number, unit: number, point?: number): number`**: Converts numbers by dividing them with a specified unit and rounding to a defined number of decimal points.
-  - **`deciPoint(num: number, decimalPoint: number): number`**: Rounds numbers to the specified number of decimal places.
+  - **`deciPoint(num: number, decimalPoint: number): number`**: Cuts numbers to the specified number of decimal places.
 
 ### Usage
 
 - **Installation**: Install using npm with `npm install prefixly-formatter`.
 - **Basic Usage**:
   ```typescript
-  import { prefX } from 'prefixly-formatter';
+  import { prefx } from 'prefixly-formatter';
 
-  const formattedNumber = prefX(12345.6789, 2);
-  console.log(formattedNumber); // Outputs: "12.35K"
+  const formattedNumber = prefx(12345.6789, 2);
+  console.log(formattedNumber); // Outputs: "12.34K"
   ```
 - **API**:
-  - **`prefX(num: number, point?: number): string`**:
+  - **`prefx(num: number, point?: number): string`**:
     - **num**: The number to format.
     - **point** (optional): Number of decimal places in the formatted output.
     - Returns a string with the formatted number and unit prefix.
@@ -40,4 +41,5 @@
 - **Precision Handling**: Improved precision handling in `convertNumber` and `deciPoint` functions.
 
 ### Changed
-- **Formatting Logic**: Adjusted formatting logic to handle thousands (`K`) with optional decimal precision.
+- **Formatting Logic**: Adjusted formatting logic to handle thousands (`K`), millions (`M`) and billions (`M`) with optional decimal precision.
+- **Usage Function**: Changed main function from prefX to prefx.

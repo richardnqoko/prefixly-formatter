@@ -22,6 +22,7 @@ export const convertNumber = (num: number, unit: number, point?: number) => {
     }
 }
 
+// decimal place logic
 export const deciPoint = (num: number, decimalPoint: number) => {
     if (num % 1 === 0) {
         return num;

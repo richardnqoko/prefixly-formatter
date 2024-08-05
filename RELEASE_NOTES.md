@@ -8,14 +8,14 @@
   - Introduced `prefixly-formatter`, a module for formatting numbers with unit prefixes. This utility helps in representing large numbers more clearly by converting them into a readable format with optional decimal precision.
 
 - **Features**:
-  - **`prefX` Function**:
-    - Formats numbers with unit prefixes, such as thousands (`K`), and allows for optional decimal precision.
+  - **`prefx` Function**:
+    - Formats numbers with unit prefixes, such as thousands (`K`), millions (`M`) and billions (`M`), and allows for optional decimal precision.
     - Example usage:
       ```typescript
-      import { prefX } from 'prefixly-formatter';
+      import { prefx } from 'prefixly-formatter';
 
-      const formattedNumber = prefX(12345.6789, 2);
-      console.log(formattedNumber); // Outputs: "12.35K"
+      const formattedNumber = prefx(12345.6789, 2);
+      console.log(formattedNumber); // Outputs: "12.34K"
       ```
   - **Utility Functions**:
     - **`convertNumber(num: number, unit: number, point?: number): number`**:
@@ -30,16 +30,16 @@
     ```
 
 - **Usage**:
-  - Import and use the `prefX` function to format numbers. For example:
+  - Import and use the `prefx` function to format numbers. For example:
     ```typescript
-    import { prefX } from 'prefixly-formatter';
+    import { prefx } from 'prefixly-formatter';
 
-    const formattedNumber = prefX(12345.6789, 2);
-    console.log(formattedNumber); // Outputs: "12.35K"
+    const formattedNumber = prefx(12345.6789, 2);
+    console.log(formattedNumber); // Outputs: "12.34K"
     ```
 
 - **Improvements**:
   - Enhanced precision handling in the number conversion and rounding functions for accurate formatting.
 
 - **Changes**:
-  - Updated formatting logic to handle large numbers using thousands (`K`) with optional decimal precision.
+  - Updated formatting logic to handle large numbers using thousands (`K`), millions (`M`) and billions (`M`)with optional decimal precision.
