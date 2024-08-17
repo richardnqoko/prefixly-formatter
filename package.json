@@ -1,0 +1,33 @@
+{
+  "name": "prefixly-formatter",
+  "version": "2.16.1",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "repository": {
+    "url": "https://github.com/richardnqoko/prefixly-formatter"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsup"
+  },
+  "keywords": [
+    "typescript",
+    "package",
+    "formatting",
+    "number",
+    "prefix"
+  ],
+  "author": "Richard Nqoko",
+  "license": "MIT",
+  "description": "A Node.js module for formatting large numbers into shorter human-readable versions",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.1.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.4",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}

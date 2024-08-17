@@ -1,0 +1,12 @@
+/node_modules
+/src
+
+*.vscode
+/__tests__
+
+.git/
+.gitignore
+
+tsconfig.json
+tsup.config.ts
+jest.config.ts
